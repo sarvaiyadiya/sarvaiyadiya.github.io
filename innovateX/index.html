@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InnovatX - Smart Patient Forms</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <h1>InnovatX - Smart Patient Forms</h1>
+        <button id="theme-toggle">🌙</button>
+    </header>
+    
+    <main>
+        <div class="card-container">
+            <div class="card" onclick="startForm('General Checkup')">
+                <h2>General Checkup</h2>
+                <p>Basic health screening form.</p>
+            </div>
+            <div class="card" onclick="startForm('Surgery')">
+                <h2>Surgery</h2>
+                <p>Pre-surgery medical history.</p>
+            </div>
+            <div class="card" onclick="startForm('Emergency')">
+                <h2>Emergency</h2>
+                <p>Quick emergency response form.</p>
+            </div>
+        </div>
+
+        <form id="patient-form" class="hidden">
+            <h2 id="form-title">Fill Patient Details</h2>
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="text" id="phone" placeholder="Phone Number" required>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="success-message" class="hidden">✅ Form submitted successfully!</div>
+    </main>
+    
+    <footer>
+        &copy; 2025 InnovatX. All Rights Reserved.
+    </footer>
+</body>
+</html>
